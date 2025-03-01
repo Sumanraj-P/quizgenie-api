@@ -26,7 +26,7 @@ def generate_quiz_api(request: QuizRequest):
     quiz_data = generate_quiz(request.topic, request.difficulty, request.num_questions)
     if not quiz_data:
         raise HTTPException(status_code=500, detail="Failed to generate quiz.")
-    
+
     return {
         "user_id": request.user_id,
         "quiz_data": quiz_data

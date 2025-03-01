@@ -66,7 +66,7 @@ def generate_quiz(topic: str, difficulty: str, num_questions: int):
     except Exception as e:
         print(f"Error generating quiz: {e}")
         return None
-
+ 
 @app.get("/quiz")
 def get_quiz(topic: str, difficulty: str, num_questions: int):
     """Returns generated quiz without storing."""

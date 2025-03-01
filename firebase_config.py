@@ -10,3 +10,4 @@ db = firestore.client()
 def get_user_ref(user_id):
     """Returns Firestore reference for a user."""
     return db.collection("users").document(user_id)
+ 
